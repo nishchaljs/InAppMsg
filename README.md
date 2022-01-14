@@ -20,9 +20,14 @@ FCM is just a demo of Android Application which implement Firebase Cloud Messagi
 * Data : 4KB of custom key-value pairs
 
 ## Screenshots
+<table width="70%">
+	<tr>
+	  <th width="30%"><img src="https://github.com/nishchaljs/InAppMsg/blob/main/result.png"></th>
+	  <th width="30%"><img src="https://cloud.githubusercontent.com/assets/1763410/16553886/8f8af5da-41f5-11e6-85c4-cb6937c80bab.png"></th>
+	</tr>
+</table>
 <table width="100%">
 	<tr>
-	  <th width="33%"><img src="https://github.com/nishchaljs/InAppMsg/blob/main/result.png"></th>
-	  <th width="33%"><img src="https://cloud.githubusercontent.com/assets/1763410/16553886/8f8af5da-41f5-11e6-85c4-cb6937c80bab.png"></th>
+	  <th width="100%"><img src="https://github.com/nishchaljs/InAppMsg/blob/main/Firebase_console.png"></th>
 	</tr>
 </table>
