@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "552891347623",
+    "project_id": "mbaas-f5de1",
+    "storage_bucket": "mbaas-f5de1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552891347623:android:02681f665af04bc60a6182",
+        "android_client_info": {
+          "package_name": "com.example.fcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "552891347623-3df6mheiecbu1lrdhjif2nse78aalf9p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyALLWOLU0Eqcmy-RphncsOb51BqShZww"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "552891347623-3df6mheiecbu1lrdhjif2nse78aalf9p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

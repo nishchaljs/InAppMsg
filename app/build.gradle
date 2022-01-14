@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+
+android {
+	compileSdkVersion compileAndTargetSdkVersion
+	buildToolsVersion '30.0.3'
+
+	defaultConfig {
+		applicationId "com.example.fcm"
+		minSdkVersion 21
+		targetSdkVersion compileAndTargetSdkVersion
+		versionCode 1
+		versionName "1.0"
+		resConfigs('en', 'xxxhdpi')
+		ndk {
+			abiFilters "x86", "x86_64", "arm64-v8a", "armeabi-v7a"
+		}
+		compileOptions {
+			sourceCompatibility JavaVersion.VERSION_1_8
+			targetCompatibility JavaVersion.VERSION_1_8
+		}
+	}
+
+	buildTypes {
+		release {
+			minifyEnabled true
+			shrinkResources true
+			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+		}
+		debug {
+			splits.abi.enable = false
+			splits.density.enable = false
+			aaptOptions.cruncherEnabled = false
+		}
+	}
+
+	buildFeatures {
+		viewBinding = true
+	}
+
+	dexOptions {
+		preDexLibraries true
+		maxProcessCount 8
+	}
+}
+
+dependencies {
+	implementation 'com.google.android.material:material:1.4.0'
+	implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+	implementation 'androidx.multidex:multidex:2.0.1'
+
+	// Import the Firebase BoM (see: https://firebase.google.com/docs/android/learn-more#bom)
+	implementation platform('com.google.firebase:firebase-bom:29.0.0')
+
+	// FIAM (Java)
+	implementation 'com.google.firebase:firebase-inappmessaging-display'
+
+	// FIAM (Kotlin)
+	implementation 'com.google.firebase:firebase-inappmessaging-display-ktx'
+
+	// The Firebase SDK for Google Analytics is required to use In-App Messaging
+	// Analytics (Java)
+	implementation 'com.google.firebase:firebase-analytics'
+
+	// Analytics (Kotlin)
+	implementation 'com.google.firebase:firebase-analytics-ktx'
+
+	implementation 'com.google.firebase:firebase-installations-ktx:17.0.0'
+
+	androidTestImplementation 'androidx.test:runner:1.4.0'
+	androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+	androidTestImplementation 'androidx.test:rules:1.4.0'
+	androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
+}
+
+
+apply plugin: 'com.google.gms.google-services'
